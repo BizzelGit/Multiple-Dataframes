@@ -1,0 +1,12 @@
+import codecademylib3
+import pandas as pd
+
+sales = pd.read_csv('sales.csv')
+
+targets = pd.read_csv('targets.csv')
+
+sales_vs_targets = pd.merge(sales, targets)
+
+print(sales_vs_targets)
+
+crushing_it = sales_vs_targets[sales_vs_targets.revenue > sales_vs_targets.target]
